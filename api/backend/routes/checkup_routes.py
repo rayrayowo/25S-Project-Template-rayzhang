@@ -34,3 +34,4 @@ def create_checkup():
         "message": "Checkup created successfully!",
         "checkup": data
     }), 201
+    
