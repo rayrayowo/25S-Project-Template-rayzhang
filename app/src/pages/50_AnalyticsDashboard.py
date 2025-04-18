@@ -1,11 +1,11 @@
 import streamlit as st
 import requests
 
-st.title("🐾 Pet Overview")
-st.write("This page displays all pets and their details.")
+st.title("📈 Analytics Dashboard")
+st.write("See insights and health analytics for your pet.")
 
 try:
-    response = requests.get("http://localhost:3111/pets")
+    response = requests.get("http://localhost:3111/analytics")
     if response.status_code == 200:
         data = response.json()
         st.dataframe(data)

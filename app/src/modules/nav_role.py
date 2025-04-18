@@ -1,0 +1,13 @@
+def RayRoleNav():
+    st.sidebar.page_link("pages/40_PetOverview.py", label="🐾 Pet Overview")
+    st.sidebar.page_link("pages/41_AppointmentBooking.py", label="📅 Book Appointment")
+    st.sidebar.page_link("pages/42_GroomerList.py", label="💇 Groomers")
+    st.sidebar.page_link("pages/43_VetList.py", label="🩺 Veterinarians")
+    st.sidebar.page_link("pages/44_CheckupRecords.py", label="📝 Checkup Records")
+    st.sidebar.page_link("pages/45_HealthTracker.py", label="📊 Health Tracker")
+    st.sidebar.page_link("pages/46_MedicationList.py", label="💊 Medication List")
+    st.sidebar.page_link("pages/47_PrescriptionLog.py", label="📋 Prescription Log")
+    st.sidebar.page_link("pages/48_ExerciseLog.py", label="🏃 Exercise Log")
+    st.sidebar.page_link("pages/49_Community.py", label="🌐 Community")
+    st.sidebar.page_link("pages/50_AnalyticsDashboard.py", label="📈 Analytics Dashboard")
+    st.sidebar.page_link("pages/51_Events.py", label="📅 Pet Events")

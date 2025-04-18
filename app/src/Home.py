@@ -73,5 +73,15 @@ if st.button('Act as System Administrator',
     st.session_state['first_name'] = 'SysAdmin'
     st.switch_page('pages/20_Admin_Home.py')
 
+if st.button('Act as a Pet Owner (Ray)', 
+            type = 'primary', 
+            use_container_width=True):
+    st.session_state['authenticated'] = True
+    st.session_state['role'] = 'pet_user'
+    st.session_state['first_name'] = 'Ray'
+    logger.info("Logging in as PetHub user")
+    st.switch_page('pages/40_PetOverview.py')
+
+
 
 
