@@ -1,17 +1,17 @@
-###
-# Main application interface
-###
+from flask import Flask
+from api.backend.db_connection import db
 
-# import the create app function 
-# that lives in src/__init__.py
-from backend.rest_entry import create_app
+app = Flask(__name__)
 
-# create the app object
-app = create_app()
+# 从 .env 或硬编码配置中读取数据库连接参数
+app.config["MYSQL_HOST"] = "mysql_db"
+app.config["MYSQL_USER"] = "root"
+app.config["MYSQL_PASSWORD"] = "password"
+app.config["MYSQL_DB"] = "pawpal"
+app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 
-if __name__ == '__main__':
-    # we want to run in debug mode (for hot reloading) 
-    # this app will be bound to port 4000. 
-    # Take a look at the docker-compose.yml to see 
-    # what port this might be mapped to... 
-    app.run(debug = True, host = '0.0.0.0', port = 4000)
+# 绑定 app 到数据库对象
+db.init_app(app)
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=4000)
