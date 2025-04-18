@@ -1,3 +1,4 @@
+# This is a standalone community forum page with post and comment display
 import streamlit as st
 import requests
 
